@@ -1,0 +1,27 @@
+Question1:
+Que fait-il ?
+
+Ce code représente une application web simple en PHP pour gérer une liste d’utilisateurs. Il permet de :
+Afficher une liste d'utilisateurs enregistrés dans une base de données MySQL.
+Ajouter de nouveaux utilisateurs en saisissant leur nom et prénom via un formulaire.
+Modifier les informations d’un utilisateur existant en sélectionnant un utilisateur dans la liste, puis en mettant à jour ses données dans un formulaire.
+
+Que pensez-vous de ce code en termes de lisibilité et de facilité de modification ?
+
+Points positifs :
+Le code est relativement simple et facile à comprendre pour un débutant.
+Les différentes actions (ajouter, modifier, save) sont bien différenciées par des conditions sur $_GET["action"].
+Points négatifs :
+Sécurité :
+Les entrées utilisateurs ne sont pas suffisamment sécurisées contre les injections SQL. Bien que des requêtes préparées soient utilisées, la méthode d'accès directe aux paramètres via $_GET reste risquée.
+Lisibilité :
+Le mélange de logique PHP et de structure HTML rend le code difficile à maintenir et à déboguer. Il serait préférable de séparer la logique métier (PHP) de la présentation (HTML) en utilisant un modèle MVC (Model-View-Controller).
+Structure rigide :
+Le code n'est pas modulable, car tout est regroupé dans un seul fichier. Cela peut poser problème si l’application devient plus complexe.
+Absence de gestion des erreurs :
+Il n’y a aucune gestion des exceptions ou des erreurs, par exemple en cas de problème de connexion à la base de données ou d’échec d’exécution des requêtes.
+Réutilisabilité limitée :
+Les actions (ajouter, modifier, afficher) ne sont pas organisées sous forme de fonctions ou de classes, ce qui limite la réutilisabilité du code.
+
+Question4:
+code fonctionne
